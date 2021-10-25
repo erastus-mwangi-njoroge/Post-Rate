@@ -26,7 +26,7 @@ class Rating(models.Model):
 class Profile(models.Model):
 
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    profile_pic = models.ImageField('profilePicture')
+    profilePicture = models.ImageField('profilePicture')
     bio = models.TextField(blank=True)
 
     def __str__(self):
