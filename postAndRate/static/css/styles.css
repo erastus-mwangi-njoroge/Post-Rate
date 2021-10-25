@@ -1,5 +1,5 @@
 .landing-page {
-    background-image: url(../assets/BeFunky-photo\ \(1\).png);
+    background-image: url(../assets/moringaaw.jpg );
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
@@ -26,7 +26,7 @@ body {
 .bg-projects {
     background-attachment: fixed;
     background-size: cover;
-    background-image: url(../assets/awwardsbg.jpeg);
+    background-image: url(../assets/awards.jpg);
 }
 
 .custom-display {
