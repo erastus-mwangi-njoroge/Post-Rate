@@ -60,7 +60,7 @@ You can provide feedback or raise any issues/ bugs through the following means:
 * eramwangiz@gmail.com
 
 ## Live Site link
-You can view the live application by following this [link]().
+You can view the live application by following this [link](https://postandrate.herokuapp.com/).
 
 ## License
 #### [*GNU License*](LICENSE)
