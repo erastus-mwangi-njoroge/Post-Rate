@@ -1,12 +1,13 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 class Project(models.Model):
     
     title = models.CharField(max_length=40)
     description = models.TextField()
     link = models.CharField(max_length=255)
-    image = models.ImageField('postedPhotos')
+    image = CloudinaryField('postedPhotos')
     user = models.ForeignKey(User,on_delete=models.CASCADE)
 
     def __str__(self):
@@ -26,7 +27,7 @@ class Rating(models.Model):
 class Profile(models.Model):
 
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    profilePicture = models.ImageField('profilePicture')
+    profilePicture = CloudinaryField('profilePicture')
     bio = models.TextField(blank=True)
 
     def __str__(self):
