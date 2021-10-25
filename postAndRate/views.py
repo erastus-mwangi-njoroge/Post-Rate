@@ -23,7 +23,7 @@ def Index_view(request):
         "projects":projects,
     }
     
-    return render(request,"main/index.html",context)
+    return render(request,"projects/index.html",context)
 
 @login_required
 def Upload_Project(request):
@@ -44,7 +44,7 @@ def Upload_Project(request):
         "form":form
     }
 
-    return render(request,"main/upload_project.html",context)
+    return render(request,"projects/createproject.html",context)
 
 @login_required
 def RateProject(request,pk):
@@ -104,7 +104,7 @@ def RateProject(request,pk):
         "design_percent":design_percent
     }
 
-    return render(request,"main/rateproject.html",context)
+    return render(request,"projects/rate.html",context)
 
 @login_required
 def AjaxRating(request,pk):
@@ -144,15 +144,15 @@ def User_Profile(request):
     context = {
         "current_user":current_user
     }
-    return render(request,"main/profile_details.html",context)
+    return render(request,"projects/profileDetails.html",context)
 
 @login_required
-def Dev_center(request):
-    title = "Devcenter"
+def Endpoints(request):
+    title = "Endpoints"
     context = {
         "title":title
     }
-    return render(request,"main/devcenter.html",context)
+    return render(request,"projects/endpoints.html",context)
     
 class ProjectList(APIView):
     def get(self,request,format=None):
