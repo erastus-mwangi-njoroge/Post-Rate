@@ -1,1 +1,1 @@
-web: gunicorn moringaawwards.wsgi --log-file -
+web: gunicorn moringaawwards.wsgi 
