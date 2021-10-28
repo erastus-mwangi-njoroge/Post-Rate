@@ -13,10 +13,10 @@
         
         <div class="col-md-4">
         <div class="card" style="width: 18rem;">
-            <img src="{{ image.url }}" class="card-img-top" alt="Project image">
+            <img src="{{ project.image.url }}" class="card-img-top" alt="Project image">
             <div class="card-body">
                 <div class="project-owner-display">
-                    <img src="{{ profilePicture.url }}" alt="profile picture" class="rounded-circle custom-display border border-danger">
+                    <img src="{{project.user.profile.profilePicture.url}}" alt="profile picture" class="rounded-circle custom-display border border-warning">
                     <p class="ml-2">Uploaded by: {{ project.user.username }}</p>
                 </div>
                 <p class="card-text">Project Name: {{ project.title }}</p>

@@ -4,7 +4,7 @@
 
     <div class="container-fluid">
         <div class="media">   
-            <img src="{{ current_user.profile.profilePicture.url }}" alt="profile image" class="rounded-circle profile-img">
+            <img src="{{ current_user.profile.profilePicture.url }}" alt="profile image" class="rounded-circle prof">
             <div class="media-body">
                 <h2 class="account-heading ml-4">Username: {{ user.username }}</h2>
                 <p class="text-secondary ml-4"> Email: {{ user.email }}</p>
@@ -18,10 +18,10 @@
             {% for project in current_user.project_set.all %}
                 <div class="col-md-4">
                     <div class="card" style="width: 18rem;">
-                        <img src="{{ image.url }}" class="card-img-top" alt="Project image">
+                        <img src="{{ project.image.url }}" class="card-img-top" alt="Project image">
                         <div class="card-body">
                             <div class="project-owner-display">
-                                <img src="{{ profilePicture.url }}" alt="profile picture" class="rounded-circle custom-display border border-danger">
+                                <img src="{{ project.user.profile.profilePicture.url }}" alt="profile picture" class="rounded-circle custom-display border border-warning">
                                 <p class="ml-2">Uploaded by: {{ project.user.username }}</p>
                             </div>
                             <p class="card-text">Project Name: {{ project.title }}</p>
